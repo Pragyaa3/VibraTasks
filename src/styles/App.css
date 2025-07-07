@@ -20,10 +20,14 @@ body.dark-mode {
   --badge-category: #4ef4e7;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: var(--bg-main);
+  background: linear-gradient(to right, #ffe29f, #ffa99f, #ff719a, #ff3d77);
   color: var(--text-main);
   min-height: 100vh;
   overflow-x: hidden;
@@ -76,8 +80,6 @@ body {
   flex-direction: column;
   gap: 12px;
   margin-bottom: 1.5rem;
-  max-height: 400px;
-  overflow-y: auto;
   padding-right: 10px;
 }
 
@@ -191,3 +193,4 @@ body {
     align-items: flex-start;
   }
 }
+

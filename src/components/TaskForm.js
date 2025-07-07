@@ -15,13 +15,17 @@ function TaskForm({ addTask, editingTask, updateTask }) {
       setDueDate(editingTask.dueDate || '');
       setCategory(editingTask.category || '');
     } else {
-      setTitle('');
-      setDescription('');
-      setPriority('Medium');
-      setDueDate('');
-      setCategory('');
+      resetForm();
     }
   }, [editingTask]);
+
+  const resetForm = () => {
+    setTitle('');
+    setDescription('');
+    setPriority('Medium');
+    setDueDate('');
+    setCategory('');
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,12 +45,7 @@ function TaskForm({ addTask, editingTask, updateTask }) {
     if (editingTask) updateTask(taskData);
     else addTask(taskData);
 
-    // Reset form
-    setTitle('');
-    setDescription('');
-    setPriority('Medium');
-    setDueDate('');
-    setCategory('');
+    resetForm();
   };
 
   return (
