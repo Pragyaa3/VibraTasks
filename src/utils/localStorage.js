@@ -1,15 +1,10 @@
-export const getUserId = () => {
-  const username = localStorage.getItem('username');
-  return username ? `user-${username.toLowerCase().trim()}` : 'user-guest';
+export const saveTasks = (username, password, tasks) => {
+  const key = `tasks_${username}_${password}`;
+  localStorage.setItem(key, JSON.stringify(tasks));
 };
 
-export const loadTasks = () => {
-  const userId = getUserId();
-  const data = localStorage.getItem(`tasks-${userId}`);
-  return data ? JSON.parse(data) : [];
-};
-
-export const saveTasks = (tasks) => {
-  const userId = getUserId();
-  localStorage.setItem(`tasks-${userId}`, JSON.stringify(tasks));
+export const loadTasks = (username, password) => {
+  const key = `tasks_${username}_${password}`;
+  const stored = localStorage.getItem(key);
+  return stored ? JSON.parse(stored) : [];
 };

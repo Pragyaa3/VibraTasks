@@ -29,6 +29,24 @@
   background-color: transparent;
 }
 
+.logout-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 10px 15px;
+  background-color: var(--accent-light);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: var(--accent);
+}
+
 
 @media screen and (max-width: 768px) {
   .dash-title {
