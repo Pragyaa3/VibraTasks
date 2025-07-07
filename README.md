@@ -8,7 +8,7 @@ Manage your tasks effortlessly with features like dark mode, search, filtering, 
 
 ## 🚀 Live Demo
 
-🔗 [Live App Link](https://your-live-link.vercel.app)
+🔗 [Live App Link](https://vibra-tasks.vercel.app/)
 
 ---
 
